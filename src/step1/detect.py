@@ -47,8 +47,8 @@ class DetectHandler:
                 session=frida.attach(pid)
                 def on_message(message:dict,_:bytes):
                     if message["type"]=="send":
-                        result_queue.put(message["payload"]["msg"])
                         frida.kill(pid)
+                        result_queue.put(message["payload"]["msg"])
                 with open(DetectHandler.resource_path("hook2.js") ,"r",encoding="utf-8") as sr:
                     script=session.create_script(sr.read().replace("$func_offset",hex(inner_func_addr)).replace("$keyword",keyword))
                 script.on("message",on_message)
