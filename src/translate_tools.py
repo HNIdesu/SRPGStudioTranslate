@@ -34,5 +34,6 @@ detect_handler.set_defaults(func=detect)
 if len(sys.argv)<=1:
     parser.print_help()
 else:
-    parser.parse_args()
+    args=parser.parse_args()
+    args.func(args)
 
