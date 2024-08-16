@@ -29,7 +29,7 @@ python translate_tools.py patch detect game_directory project_file_path
 
 ### 2. Extract Text from `data.dts`
 
-Next, run the `fetch.py` script to extract all the text from the `data.dts` file in the game directory. This step generates a `database.db` file containing all the text.
+Next, run the `fetch.py` script to extract all the text from the `data.dts` file in the game directory. This step generates a `translation.pot` file containing all the text.
 
 ```bash
 python translate_tools.py fetch game_directory -r rva
