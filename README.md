@@ -21,7 +21,7 @@ Follow these steps to translate the game:
 Run the `detect.py` script to get the RVA value, which is essential for the following steps.
 
 ```bash
-python translate_tools.py patch detect game_directory project_file_path
+python translate_tools.py detect game_directory project_file_path
 ```
 
 - `game_directory`: The directory where the SRPG Studio game is located.
